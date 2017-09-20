@@ -138,6 +138,9 @@ class NullChildren extends Component {
 			<div className='root'>
 				<CSSTransitionGroup transitionName="example">
 					{null}
+					{false}
+					{true}
+					{undefined}
 
 					{ items.map( ({displayed, item}, i) => (
 						displayed ? <Todo key={item} onClick={this.toggleDisplay.bind(this, i)}>

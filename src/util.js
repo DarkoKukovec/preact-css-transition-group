@@ -10,6 +10,6 @@ export function onlyChild(children) {
 	return children && children[0];
 }
 
-export function filterNullChildren(children) {
-	return children && children.filter(i => i !== null);
+export function filterUnrenderableChildren(children) {
+	return children && children.filter(i => i !== null && i !== undefined && typeof i !== 'boolean');
 }
